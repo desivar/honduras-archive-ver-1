@@ -15,7 +15,7 @@ const SearchPage = () => {
   const fetchAllRecords = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://honduras-archive.onrender.com/api/archive');
+      const response = await axios.get('https://honduras-archive-ver-1.onrender.com/api/archive');
       setResults(response.data.items || []);
     } catch (error) {
       console.error("Error loading archive:", error);
@@ -34,7 +34,7 @@ const SearchPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`https://honduras-archive.onrender.com/api/archive?search=${query}`);
+      const response = await axios.get(`https://honduras-archive-ver-1.onrender.com/api/archive?search=${query}`);
       setResults(response.data.items || []);
     } catch (error) {
       console.error("Error fetching from database:", error);

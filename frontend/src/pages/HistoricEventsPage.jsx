@@ -14,7 +14,7 @@ const EventCard = ({ record, onDeleteSuccess }) => {
     if (window.confirm(`Are you sure you want to delete "${record.eventName}"?`)) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`https://honduras-archive.onrender.com/api/archive/${record._id}`, {
+        await axios.delete(`https://honduras-archive-ver-1.onrender.com/api/archive/${record._id}`, {
           headers: { 'x-auth-token': token }
         });
         alert('Record deleted successfully');
@@ -159,7 +159,7 @@ const HistoricEventsPage = () => {
       if (searchTerm) params.append('search', searchTerm);
 
       const res = await axios.get(
-        `https://honduras-archive.onrender.com/api/archive?${params.toString()}`
+        `https://honduras-archive-ver-1.onrender.com/api/archive?${params.toString()}`
       );
       setEvents(res.data.items || []);
       setCurrentPage(1);
