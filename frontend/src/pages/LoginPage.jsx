@@ -15,7 +15,7 @@ const LoginPage = ({ onLogin }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('https://honduras-archive-ver-1-1.onrender.com/api/auth/login', {
+      const response = await axios.post('https://honduras-archive-ver-1.onrender.com/api/auth/login', {
         username, password
       });
 

@@ -20,7 +20,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post('https://honduras-archive-ver-1-1.onrender.com/api/auth/signup', {
+      const res = await axios.post('https://honduras-archive-ver-1.onrender.com/api/auth/signup', {
         username, email, password, whatsapp, role
       });
 

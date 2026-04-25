@@ -47,7 +47,7 @@ export default function TodayInHistory() {
   const fetchTodayRecords = async () => {
     try {
       // Search for the day number (e.g., "23")
-      const res = await axios.get('https://honduras-archive-ver-1-1.onrender.com/api/archive', {
+      const res = await axios.get('https://honduras-archive-ver-1.onrender.com/api/archive', {
         params: { search: day.toString() }
       });
 
