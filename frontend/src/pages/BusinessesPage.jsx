@@ -13,7 +13,7 @@ const BusinessCard = ({ record, onDeleteSuccess }) => {
     if (window.confirm(`Are you sure you want to delete "${record.businessName}"?`)) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`https://honduras-archive-ver-1.onrender.com/api/archive/${record._id}`, {
+        await axios.delete(`https://honduras-archive-ver-1-1.onrender.com/api/archive/${record._id}`, {
           headers: { 'x-auth-token': token }
         });
         alert('Record deleted successfully');
@@ -147,7 +147,7 @@ const BusinessesPage = () => {
     try {
       const params = new URLSearchParams({ category: 'Business' });
       if (searchTerm) params.append('search', searchTerm);
-      const res = await axios.get(`https://honduras-archive-ver-1.onrender.com/api/archive?${params.toString()}`);
+      const res = await axios.get(`https://honduras-archive-ver-1-1.onrender.com/api/archive?${params.toString()}`);
       setBusinesses(res.data.items || []);
       setCurrentPage(1);
     } catch (err) {

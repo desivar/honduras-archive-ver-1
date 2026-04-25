@@ -13,7 +13,7 @@ const RecordDetail = () => {
   useEffect(() => {
     const fetchRecord = async () => {
       try {
-        const response = await axios.get(`https://honduras-archive-ver-1.onrender.com/api/archive/${id}`);
+        const response = await axios.get(`https://honduras-archive-ver-1-1.onrender.com/api/archive/${id}`);
         setRecord(response.data);
       } catch (error) {
         console.error('Error fetching record:', error);
